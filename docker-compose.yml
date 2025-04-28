@@ -1,0 +1,12 @@
+services:
+  frontend:
+    build:
+      context: .
+    container_name: frontend-react
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    command: npm start
