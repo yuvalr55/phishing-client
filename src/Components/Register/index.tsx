@@ -14,7 +14,6 @@ const RegisterForm: React.FC = () => {
 
         try {
             await registerUser(email, password, isAdmin);
-
             navigate("/phishing");
         } catch (error: any) {
             console.error("Registration failed:", error);

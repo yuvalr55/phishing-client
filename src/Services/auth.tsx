@@ -12,6 +12,7 @@ export const registerUser = async (email: string, password: string, admin: boole
             {withCredentials: true});
         return response.data;
     } catch (error) {
+        console.error(error);
         throw error;
     }
 };
@@ -38,6 +39,6 @@ export const checkAuthAndFetch = async () => {
         return response.data;
     } catch (err) {
         console.error("Auth check failed:", err);
-        return null; // או לזרוק שגיאה עם throw err;
+        return null;
     }
 };

@@ -104,7 +104,6 @@ const Phishing: React.FC = () => {
                 });
             } catch (e: any) {
                 console.error('Authentication failed or fetch error:', e.message || e);
-                navigate('/login');
             }
         };
 
