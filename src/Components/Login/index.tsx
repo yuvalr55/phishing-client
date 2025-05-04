@@ -2,11 +2,7 @@ import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {loginUser} from "../../Services/auth";
 
-interface LoginFormProps {
-    onLoginSuccess: (username: string) => void;
-}
-
-const LoginForm: React.FC<LoginFormProps> = () => {
+const LoginForm: React.FC = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
